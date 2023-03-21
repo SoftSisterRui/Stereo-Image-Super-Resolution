@@ -188,19 +188,22 @@ python train.py --scale_factor 4
 
 ```shell
 cd LTE/lte
-python train.py --config configs/train/train_swinir-lte.yaml --gpu 0,1,2,3,4,5,6,7```
+python train.py --config configs/train/train_swinir-lte.yaml --gpu 0,1,2,3,4,5,6,7
+```
 
 ### model4: RDN_LTE
 
-`cd LTE/lte`
-
-`python train.py --config configs/train/train_rdn-lte.yaml --gpu 0,1,2,3,4,5,6,7`
+```shell
+cd LTE/lte
+python train.py --config configs/train/train_rdn-lte.yaml --gpu 0,1,2,3,4,5,6,7
+```
 
 ### model5: LIIF
 
-`cd mmedit`
-
-`bash tools/dist_train.sh EXP/LIIF/liif.py 8`
+```shell
+cd mmedit
+bash tools/dist_train.sh EXP/LIIF/liif.py 8
+```
 
 # Test
 ## 1. Prepare test data 
@@ -209,40 +212,41 @@ The test set format is consistent with the validation set format.
 ## 2. Begin to test
 ### model1: NAFSSR
 
-`cd NAF/NAFNet/`
-
-`python -m torch.distributed.launch --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/NAFSSR/NAFSSR-L_4x_1.yml --launcher pytorch`
-
-`python -m torch.distributed.launch --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/NAFSSR/NAFSSR-L_4x_2.yml --launcher pytorch`
-
-`python -m torch.distributed.launch --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/NAFSSR/NAFSSR-L_4x_3.yml --launcher pytorch`
-
-`python -m torch.distributed.launch --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/NAFSSR/NAFSSR-L_4x_4.yml --launcher pytorch`
+```shell
+cd NAF/NAFNet/
+python -m torch.distributed.launch --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/NAFSSR/NAFSSR-L_4x_1.yml --launcher pytorch
+python -m torch.distributed.launch --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/NAFSSR/NAFSSR-L_4x_2.yml --launcher pytorch
+python -m torch.distributed.launch --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/NAFSSR/NAFSSR-L_4x_3.yml --launcher pytorch
+python -m torch.distributed.launch --nproc_per_node=1 --master_port=4321 basicsr/test.py -opt options/test/NAFSSR/NAFSSR-L_4x_4.yml --launcher pytorch
+```
 
 ### model2: SSRDEFNet
 
-`cd SSRDEFNet/SSRDEFNet-PyTorch`
-
-`python test_sr.py`
+`
+```shell
+cd SSRDEFNet/SSRDEFNet-PyTorch
+python test_sr.py
+```
 
 ### model3: SwinIR-LTE
 
-`cd LTE/lte`
-
-`python test-save.py --config configs/test/test.yaml --model save/_train_swinir-lte/epoch_1.pth --window 8 --gpu 0`
-
-`python test-save.py --config configs/test/test.yaml --model save/_train_swinir-lte/epoch_2.pth --window 8 --gpu 0`
-
-`python test-save.py --config configs/test/test.yaml --model save/_train_swinir-lte/epoch_3.pth --window 8 --gpu 0`
+```shell
+cd LTE/lte
+python test-save.py --config configs/test/test.yaml --model save/_train_swinir-lte/epoch_1.pth --window 8 --gpu 0
+python test-save.py --config configs/test/test.yaml --model save/_train_swinir-lte/epoch_2.pth --window 8 --gpu 0
+python test-save.py --config configs/test/test.yaml --model save/_train_swinir-lte/epoch_3.pth --window 8 --gpu 0
+```
 
 ### model4: RDN_LTE
 
-`cd LTE/lte`
-
-`python test-save.py --config configs/test/test.yaml --model save/_train_rdn-lte/epoch_1.pth --window 8 --gpu 0`
+```shell
+cd LTE/lte
+python test-save.py --config configs/test/test.yaml --model save/_train_rdn-lte/epoch_1.pth --window 8 --gpu 0
+```
 
 ### model5: LIIF
 
-`cd mmedit`
-
-`python tools/test.py EXP/LIIF/liif.py EXP/LIIF/iter_588000.pth --save-path EXP/save` 
+```shell
+cd mmedit
+python tools/test.py EXP/LIIF/liif.py EXP/LIIF/iter_588000.pth --save-path EXP/save
+```
