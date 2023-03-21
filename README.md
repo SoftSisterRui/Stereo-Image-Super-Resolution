@@ -222,7 +222,6 @@ python -m torch.distributed.launch --nproc_per_node=1 --master_port=4321 basicsr
 
 ### model2: SSRDEFNet
 
-`
 ```shell
 cd SSRDEFNet/SSRDEFNet-PyTorch
 python test_sr.py
