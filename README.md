@@ -9,7 +9,7 @@ pip install -r requirements.txt
 
 
 ### model1: NAFSSR
-
+```shell
 ​    datasets
 ​    ├── StereoSR
 ​    │   ├── patches_x4
@@ -39,9 +39,9 @@ pip install -r requirements.txt
 ​    │   │       │   │   └── lr1.png
 ​    │   │       │   ├── ...
 ​    │   │       │   ├──
-
+```
 ### model2: SSRDEFNet
-
+```shell
 ​    data
 ​    ├── train
 ​    │	    └── Flickr1024_patches
@@ -72,8 +72,9 @@ pip install -r requirements.txt
 ​    │       │   │   └── lr1.png
 ​    │       │   ├── ...
 ​    │       │   ├──
-
+```
 ### model3: SwinIR-LTE
+```shell
 ​    data
     ├── Flickr1024_train
     │   ├── HR
@@ -102,8 +103,9 @@ pip install -r requirements.txt
     │   │   ├── 0002_L.png
     │   │   ├── 0002_R.png
     │   │   │    ...
-
+```
 ### model4: RDN_LTE
+```shell
 ​    data
     ├── Flickr1024_train
     │   ├── HR
@@ -132,8 +134,9 @@ pip install -r requirements.txt
     │   │   ├── 0002_L.png
     │   │   ├── 0002_R.png
     │   │   │    ...
-
+```
 ### model5: LIIF
+```shell
 ​    data
     ├── Flickr1024_train
     │   ├── HR
@@ -162,7 +165,7 @@ pip install -r requirements.txt
     │   │   ├── 0002_L.png
     │   │   ├── 0002_R.png
     │   │   │    ...
-
+```
 
 
 
