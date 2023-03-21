@@ -172,20 +172,23 @@ pip install -r requirements.txt
 ## 2. Begin to train
 
 ### model1: NAFSSR
-`cd NAF/NAFNet/`
-`python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train/NAFSSR/NAFSSR-L_x4.yml --launcher pytorch`
+```shell
+cd NAF/NAFNet/
+python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train/NAFSSR/NAFSSR-L_x4.yml --launcher pytorch
+```
 
 ### model2: SSRDEFNet
 
-`cd SSRDEFNet/SSRDEFNet-PyTorch`
-
-`python train.py --scale_factor 4`
+```shell
+cd SSRDEFNet/SSRDEFNet-PyTorch
+python train.py --scale_factor 4
+```
 
 ### model3: SwinIR-LTE
 
-`cd LTE/lte`
-
-`python train.py --config configs/train/train_swinir-lte.yaml --gpu 0,1,2,3,4,5,6,7`
+```shell
+cd LTE/lte
+python train.py --config configs/train/train_swinir-lte.yaml --gpu 0,1,2,3,4,5,6,7```
 
 ### model4: RDN_LTE
 
