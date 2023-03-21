@@ -1,9 +1,9 @@
 **In the final result, we integrate ten models, four of which are from NAFSSR, three from SwinIR_LTE, and the remaining three from the RDN_LTE, SSRDEFNET, LIIF, and the fusion strategy is explained in detail in factsheet.**
 
 # Requirements
-
+'''shell
 pip install -r requirements.txt 
-
+'''
 # Train
 ## 1. Prepare training data 
 
